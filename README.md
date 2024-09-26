@@ -10,16 +10,15 @@ ____________________________
 1. [Understanding SSH Keys](#understanding-ssh-keys)
 2. [Generating SSH Keys](#generating-ssh-keys)
 3. [Downloading Arch Linux](#downloading-arch-linux)
-4. [Adding SSH Keys to Your DigitalOcean Account](#adding-ssh-keys-to-your-digitalocean-account)
-5. [Adding a Custom Arch Linux Image](#adding-a-custom-arch-linux-image)
-6. [Creating a Droplet Running Arch Linux](#creating-a-droplet-running-arch-linux)
-7. [Connecting to Your Droplet](#connecting-to-your-droplet)
-8. [References](#references)
+4. [Uploading Arch Linux Image to DigitalOcean](#uploading-arch-linux-image-to-digitalocean)
+5. [Creating a Droplet Running Arch Linux](#creating-a-droplet-running-arch-linux)
+6. [Connecting to Your Droplet](#connecting-to-your-droplet)
+7. [References](#references)
 
 
 _____________
 
-## SSH Keys
+## Understanding SSH Keys
 #### What are SSH Keys?
 
 Secure Shell (SSH) is used to set up a secure connection between a device and server over an unsecure network. These SSH Keys resemble passwords they give you access and control over your system. We will be using these SSH Keys that we create to add them to our Droplet.  
@@ -78,15 +77,14 @@ It allows you to deploy operating systems that are not native by DigitalOcean. W
 Visit [Arch Linux Image](https://gitlab.archlinux.org/archlinux/arch-boxes/-/packages/1545) once you are there, be sure to select the file extension with .qcow2 it can be found at the bottom with a rough **Size** of 450 MiB. Once that is downloaded, we can move onto the next step of creating a droplet in DigitalOcean.
 
 
-
 ## Uploading Arch Linux Image to DigitalOcean
 
 
 ## References
 
-	Barrett, D. J., Silverman, R. E., & Byrnes, R. G. (2005). _SSH, The Secure Shell: The Definitive Guide_ (2nd ed.). O'Reilly Media.
-	Arch Linux Wiki. (n.d.). _Arch Linux_. https://wiki.archlinux.org/title/Arch_Linux
-	
+Barrett, D. J., Silverman, R. E., & Byrnes, R. G. (2005). _SSH, The Secure Shell: The Definitive Guide_ (2nd ed.). O'Reilly Media.
+Arch Linux Wiki. (n.d.). _Arch Linux_. https://wiki.archlinux.org/title/Arch_Linux
+
 
 > [!NOTE]
 > Information the user should notice even if skimming.
