@@ -85,7 +85,7 @@ Now we are going to create a droplet on DigitalOcean, with the Arch Linux image 
 3. **Select** *San Francisco* as your region.
 4. Scroll down to Choose an image section, **Click** on Custom images ![[Pasted image 20240926165633.png]]
 5. **Click** on Upload Image button which will be located in your downloads folder. ![[Pasted image 20240926170822.png]]
-6. Here you will select the **Distribution** Arch Linux ![[Pasted image 20240926171027.png]]
+6. Here you will select the **Distribution** Arch Linux ![Pasted image 20240926171027.png]]
 7. You will choose **San Francisco** datacenter region and **select** option 3
 ## References
 
