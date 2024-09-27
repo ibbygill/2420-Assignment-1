@@ -84,8 +84,10 @@ This project will be used when creating a droplet, you will have to select a pro
 
 1. In the Top Right of the screen. Click **+ New Project** ![](Assets/Screenshot%202024-09-26%20190432.png)
 2. Type the name of the **Project**, I entered `fkey-project`
-3. Select the purpose as **Class Project / Educational Purposes**
-4. Click on **Create Project** 
+3. Select the purpose as **Class Project / Educational Purposes** 
+4. Click on **Create Project**![](Assets/Screenshot%202024-09-26%20190615%201.png)
+
+You have created your project, you can move onto the next step.
 
 
 ## Uploading Arch Linux Image to DigitalOcean
@@ -133,7 +135,15 @@ You are now going to create a droplet after uploading the image.
 4. Select **Basic** for the Droplet Type
 5. Select **Premium AMD** or **Premium Intel** and the lowest monthly option for this scenario![](Assets/Screenshot%202024-09-26%20185002.png)
 6. Move down to **Choose Authentication Method** select your **SSH Key** ![](Assets/Screenshot%202024-09-26%20185449.png)
-7. 
+7. Now under **Hostname** give your droplet a name that you can remember it by `fkey` is what I named it ![](Assets/Screenshot%202024-09-26%20191413.png)
+8. Finally, click on **Create Droplet**
+9. It should take you to a new page, where the droplet is loading ![](Assets/Screenshot%202024-09-26%20191603.png)
+10. After loading, you will copy the IP address by hovering over it and clicking. 
+	- The IP address will be used to connect via SSH
+11. Open up Windows Powershell to connect to your live droplet
+12. Type ``ssh -i .ssh/do-key fkey@your-droplets-ip-address`` to connect to it
+	  - `-i` is the path that we give to our private key
+	  - 
 ## References
 
 Barrett, D. J., Silverman, R. E., & Byrnes, R. G. (2005). _SSH, The Secure Shell: The Definitive Guide_ (2nd ed.). O'Reilly Media.
