@@ -10,11 +10,12 @@ ____________________________
 1. [Understanding SSH Keys](#understanding-ssh-keys)
 2. [Generating SSH Keys](#generating-ssh-keys)
 3. [Downloading Arch Linux](#downloading-arch-linux)
-4. [Uploading Arch Linux Image to DigitalOcean](#uploading-arch-linux-image-to-digitalocean)
-5. [Adding SSH Keys to DigitalOcean](#adding-ssh-keys-to-digitalocean)
-6. [Creating a Droplet Running Arch Linux](#creating-a-droplet-running-arch-linux)
-7. [Connecting to Your Droplet](#connecting-to-your-droplet)
-8. [References](#references)
+4. [Creating a New Project in DigitalOcean](#creating-a-new-project-in-digitalocean)
+5. [Uploading Arch Linux Image to DigitalOcean](#uploading-arch-linux-image-to-digitalocean)
+6. [Adding SSH Keys to DigitalOcean](#adding-ssh-keys-to-digitalocean)
+7. [Creating a Droplet Running Arch Linux](#creating-a-droplet-running-arch-linux)
+8. [Connecting to Your Droplet](#connecting-to-your-droplet)
+9. [References](#references)
 
 
 _____________
@@ -78,6 +79,14 @@ It allows you to deploy operating systems that are not native by DigitalOcean. W
 Visit [Arch Linux Image](https://gitlab.archlinux.org/archlinux/arch-boxes/-/packages/1545) once you are there, be sure to select the file extension with .qcow2 it can be found at the bottom with a rough **Size** of 450 MiB. Once that is downloaded, we can move onto the next step of creating a droplet in DigitalOcean.
 ![](Assets/Screenshot%202024-09-24%20125125.png)
 
+## Creating a New Project in DigitalOcean
+This project will be used when creating a droplet, you will have to select a project that you are working on.
+
+1. In the Top Right of the screen. Click **+ New Project** ![](Assets/Screenshot%202024-09-26%20190432.png)
+2. Type the name of the **Project**, I entered `fkey-project`
+3. Select the purpose as **Class Project / Educational Purposes**
+4. Click on **Create Project** 
+
 
 ## Uploading Arch Linux Image to DigitalOcean
 Now we are going to create a droplet on DigitalOcean, with the Arch Linux image we downloaded, with this droplet
@@ -118,11 +127,13 @@ You are now going to create a droplet after uploading the image.
 > [!Note]
 > Confirm you have uploaded the Arch Linux Image before moving to the next step.
 
-1. Click **Create** and select **Droplets** from the Dropdown Menu ![](Screenshot%202024-09-26%20184042.png)
+1. Click **Create** and select **Droplets** from the Dropdown Menu ![](Assets/Screenshot%202024-09-26%20184042.png)
 2. Click **San Francisco** as your Region, and Select **Datacenter 3 SFO3** for the Datacenter option ![](Assets/Screenshot%202024-09-26%20184307%201.png)
-3. Click **Custom Images** and select the **Arch Linux** image we added previously ![](Screenshot%202024-09-26%20184737.png)
-4. 
-
+3. Click **Custom Images** and select the **Arch Linux** image we added previously ![](Assets/Screenshot%202024-09-26%20184737.png)
+4. Select **Basic** for the Droplet Type
+5. Select **Premium AMD** or **Premium Intel** and the lowest monthly option for this scenario![](Assets/Screenshot%202024-09-26%20185002.png)
+6. Move down to **Choose Authentication Method** select your **SSH Key** ![](Assets/Screenshot%202024-09-26%20185449.png)
+7. 
 ## References
 
 Barrett, D. J., Silverman, R. E., & Byrnes, R. G. (2005). _SSH, The Secure Shell: The Definitive Guide_ (2nd ed.). O'Reilly Media.
