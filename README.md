@@ -174,7 +174,11 @@ Explaining Commands -
 	  - `arch` the image that we used contains a regular user named "arch"
 16. Type `yes` to confirm the droplet
 17. You will now be logged in it                                                               ![](Assets/Screenshot%202024-09-27%20150927.png)
-18. Confirm that the cloud
+18. We can now confirm if `#cloud-config` automatically installed our packages
+19. Type `fd --version` and `nvim --version` you should see the following
+    ![](Assets/Screenshot%202024-09-27%20154239%201.png)
+Congratulations! You have successfully completed the install using the Arch Linux Image.
+
 ## References
 
 Barrett, D. J., Silverman, R. E., & Byrnes, R. G. (2005). _SSH, The Secure Shell: The Definitive Guide_ (2nd ed.). O'Reilly Media.
