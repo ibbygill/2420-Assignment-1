@@ -75,6 +75,7 @@ It allows you to deploy operating systems that are not native by DigitalOcean. W
 ### Arch Linux Image
 
 Visit [Arch Linux Image](https://gitlab.archlinux.org/archlinux/arch-boxes/-/packages/1545) once you are there, be sure to select the file extension with .qcow2 it can be found at the bottom with a rough **Size** of 450 MiB. Once that is downloaded, we can move onto the next step of creating a droplet in DigitalOcean.
+![](Assets/Screenshot%202024-09-24%20125125.png)
 
 
 ## Uploading Arch Linux Image to DigitalOcean
@@ -85,7 +86,7 @@ Now we are going to create a droplet on DigitalOcean, with the Arch Linux image 
 3. **Select** *San Francisco* as your region.
 4. Scroll down to Choose an image section, **Click** on Custom images ![[Pasted image 20240926165633.png]]
 5. **Click** on Upload Image button which will be located in your downloads folder. ![[Pasted image 20240926170822.png]]
-6. Here you will select the **Distribution** Arch Linux ![Pasted image 20240926171027.png]]
+6. Here you will select the **Distribution** Arch Linux
 7. You will choose **San Francisco** datacenter region and **select** option 3
 ## References
 
