@@ -11,9 +11,10 @@ ____________________________
 2. [Generating SSH Keys](#generating-ssh-keys)
 3. [Downloading Arch Linux](#downloading-arch-linux)
 4. [Uploading Arch Linux Image to DigitalOcean](#uploading-arch-linux-image-to-digitalocean)
-5. [Creating a Droplet Running Arch Linux](#creating-a-droplet-running-arch-linux)
-6. [Connecting to Your Droplet](#connecting-to-your-droplet)
-7. [References](#references)
+5. [Adding SSH Keys to DigitalOcean](#adding-ssh-keys-to-digitalocean)
+6. [Creating a Droplet Running Arch Linux](#creating-a-droplet-running-arch-linux)
+7. [Connecting to Your Droplet](#connecting-to-your-droplet)
+8. [References](#references)
 
 
 _____________
@@ -81,13 +82,28 @@ Visit [Arch Linux Image](https://gitlab.archlinux.org/archlinux/arch-boxes/-/pac
 ## Uploading Arch Linux Image to DigitalOcean
 Now we are going to create a droplet on DigitalOcean, with the Arch Linux image we downloaded, with this droplet
 
-1. **Click** on the Create button at the top of your screen.  ![[Pasted image 20240926165211.png]]
-2. You will see a **Droplets** button, click on that.![[Pasted image 20240926165344.png]]
-3. **Select** *San Francisco* as your region.
-4. Scroll down to Choose an image section, **Click** on Custom images ![[Pasted image 20240926165633.png]]
-5. **Click** on Upload Image button which will be located in your downloads folder. ![[Pasted image 20240926170822.png]]
+1. **Click** on the Create button at the top of your screen![](Assets/Screenshot%202024-09-26%20165047.png)
+2. . **Click** on the Droplets button ![](Assets/Screenshot%202024-09-26%20165115.png)
+3. **Select** *San Francisco* as your region
+4. Scroll down to Choose an image section, **Click** on Custom images ![](Assets/Screenshot%202024-09-26%20170723.png)
+5. **Click** on Upload Image button which will be located in your downloads folder ![](Assets/Screenshot%202024-09-26%20171016.png)
 6. Here you will select the **Distribution** Arch Linux
-7. You will choose **San Francisco** datacenter region and **select** option 3
+7. You will choose **San Francisco** datacenter region and **select** option 3![](Assets/Screenshot%202024-09-26%20173119.png)
+8. Leave the tags and notes section empty and **Click** on Upload Image![](Assets/Screenshot%202024-09-26%20173228.png)
+9. Your page should look similar to this after you have uploaded the Arch Linux image ![](Assets/Screenshot%202024-09-26%20173336.png)
+
+
+## Adding SSH Keys to DigitalOcean
+
+## Creating a Droplet Running Arch Linux
+
+You are now going to create a droplet after uploading the image. We are going to use SSH as the authentication method. 
+
+> [!Note]
+> Confirm you have uploaded the Arch Linux Image before moving to the next step.
+
+1. 
+
 ## References
 
 Barrett, D. J., Silverman, R. E., & Byrnes, R. G. (2005). _SSH, The Secure Shell: The Definitive Guide_ (2nd ed.). O'Reilly Media.
