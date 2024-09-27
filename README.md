@@ -80,12 +80,12 @@ Visit [Arch Linux Image](https://gitlab.archlinux.org/archlinux/arch-boxes/-/pac
 ![](Assets/Screenshot%202024-09-24%20125125.png)
 
 ## Creating a New Project in DigitalOcean
-This project will be used when creating a droplet, you will have to select a project that you are working on.
+This project will be used when creating a droplet, you will have to select a project fthat you are working on.
 
-1. In the Top Right of the screen. Click **+ New Project** ![](Assets/Screenshot%202024-09-26%20190432.png)
+1. In the Top Right of the screen. Click **+ New Project**                                                                        ![](Assets/Screenshot%202024-09-26%20190432.png)
 2. Type the name of the **Project**, I entered `fkey-project`
 3. Select the purpose as **Class Project / Educational Purposes** 
-4. Click on **Create Project**![](Assets/Screenshot%202024-09-26%20190615%201.png)
+4. Click on **Create Project**                                                                                                                    ![](Assets/Screenshot%202024-09-26%20190615%201.png)
 
 You have created your project, you can move onto the next step.
 
@@ -107,7 +107,7 @@ Now we are going to create a droplet on DigitalOcean, with the Arch Linux image 
 ## Adding SSH Keys to DigitalOcean
 Steps to add SSH Keys to DigitalOcean to provide a more efficient and secure way of accessing our Droplet that we will create later. 
 
-1. On the side navigation bar **Click** on the settings tab
+1. On the side navigation bar **Click** on the settings tab                                                                    
 ![](Assets/Screenshot%202024-09-26%20175403.png)
 2. **Click** on the security tab
 3. **Click** on the Add SSH Key button ![](Assets/Screenshot%202024-09-26%20175608.png)
