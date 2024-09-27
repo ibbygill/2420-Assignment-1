@@ -141,9 +141,10 @@ You are now going to create a droplet after uploading the image.
 10. After loading, you will copy the IP address by hovering over it and clicking. 
 	- The IP address will be used to connect via SSH
 11. Open up Windows Powershell to connect to your live droplet
-12. Type ``ssh -i .ssh/do-key fkey@your-droplets-ip-address`` to connect to it
+12. Type ``ssh -i .ssh/do-key arch@your-droplets-ip-address`` to connect to the droplet
 	  - `-i` is the path that we give to our private key
-	  - 
+	  - `arch` the image that we used contains a regular user named "arch"
+13. You have completed the process.
 ## References
 
 Barrett, D. J., Silverman, R. E., & Byrnes, R. G. (2005). _SSH, The Secure Shell: The Definitive Guide_ (2nd ed.). O'Reilly Media.
