@@ -135,21 +135,54 @@ You are now going to create a droplet after uploading the image.
 4. Select **Basic** for the Droplet Type
 5. Select **Premium AMD** or **Premium Intel** and the lowest monthly option for this scenario![](Assets/Screenshot%202024-09-26%20185002.png)
 6. Move down to **Choose Authentication Method** select your **SSH Key** ![](Assets/Screenshot%202024-09-26%20185449.png)
-7. Now under **Hostname** give your droplet a name that you can remember it by `fkey` is what I named it ![](Assets/Screenshot%202024-09-26%20191413.png)
-8. Finally, click on **Create Droplet**
-9. It should take you to a new page, where the droplet is loading ![](Assets/Screenshot%202024-09-26%20191603.png)
-10. After loading, you will copy the IP address by hovering over it and clicking. 
+7. Click on **Advance Options**![](Assets/Screenshot%202024-09-27%20151057%201.png)
+8. **Add Initialization scripts (free)** should be selected ![](Assets/Screenshot%202024-09-27%20151106.png)
+9. Type the following into the `Enter user data here...` 
+
+   ```shell
+#cloud-config
+users:
+  - name: ibby
+    ssh-authorized-keys:
+      - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINsTV4MWsTql7pSe+5ELl9s02Hb85rYegWtSGVsVOc1J ibjyot@gmail.com
+    sudo: ['ALL=(ALL) NOPASSWD:ALL']
+    groups: sudo
+    shell: /bin/bash
+packages:
+    neovim
+    fd
+disable_root: true```
+
+Explaining Commands - 
+
+- `#cloud-config` The #cloud-config header indicates that the file contains instructions for system initialization (Cloud-init Documentation, n.d.)
+- `users`: The users: section is to create a new user and configure their settings, here we added our name, included our .public key from the fk-key.pub file (Barrett & Silverman, 2005)
+- `sudo:` gives full sudo privileges without entering a password (Barrett & Silverman, 2005).
+- `packages:` here we initialize the software packages that will be installed during the boot of this instance
+- `newvim` installs the vim text editor so we can insert and delete text (Neovim Documentation, n.d.).
+- `fd` installs the fd package which is a more modern version of `find` to search for files and directories quicker
+- `disable_root: true` this setting disables the login from the root, to reduce cyber attacks on our server (Nemeth et al., 2017)
+
+10. Now under **Hostname** give your droplet a name that you can remember it by `fkey` is what I named it ![](Assets/Screenshot%202024-09-26%20191413.png)
+11. Finally, click on **Create Droplet**
+12. It should take you to a new page, where the droplet is loading ![](Assets/Screenshot%202024-09-26%20191603.png)
+13. After loading, you will copy the IP address by hovering over it and clicking. 
 	- The IP address will be used to connect via SSH
-11. Open up Windows Powershell to connect to your live droplet
-12. Type ``ssh -i .ssh/do-key arch@your-droplets-ip-address`` to connect to the droplet
+14. Open up Windows Powershell to connect to your live droplet
+15. Type ``ssh -i .ssh/do-key arch@your-droplets-ip-address`` to connect to the droplet
 	  - `-i` is the path that we give to our private key
 	  - `arch` the image that we used contains a regular user named "arch"
-13. You have completed the process.
+16. Type `yes` to confirm the droplet
+17. You will now be logged in it                                                               ![](Assets/Screenshot%202024-09-27%20150927.png)
+18. Confirm that the cloud
 ## References
 
 Barrett, D. J., Silverman, R. E., & Byrnes, R. G. (2005). _SSH, The Secure Shell: The Definitive Guide_ (2nd ed.). O'Reilly Media.
 Arch Linux Wiki. (n.d.). _Arch Linux_. https://wiki.archlinux.org/title/Arch_Linux
 DigitalOcean. (n.d.). _How to choose a data center location for your business_. DigitalOcean. https://docs.digitalocean.com/products/networking/regions/
+Cloud-init Documentation. (n.d.). _User Data and Cloud-init_ https://cloudinit.readthedocs.io/en/latest/topics/format.html
+Neovim Documentation. (n.d.). _Introduction to Neovim_. Retrieved from https://neovim.io/
+Nemeth, E., Snyder, G., & Hein, T. R. (2017). _UNIX and Linux System Administration Handbook_ (5th ed.). Pearson Education.
 
 
 > [!NOTE]
