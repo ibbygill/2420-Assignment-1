@@ -58,16 +58,16 @@ ssh-keygen -t ed25519 -f ~/.ssh/do-key -C "your_email@example.com"
 
 ##### Explaining Commands - 
 
-- **`ssh-keygen`**: This is used to generate SSH key pairs.
--  **`-t`**: option specifies the type of key to generate, such as RSA or ed25519 (Barrett, Silverman, & Byrnes, 2005). We use the ed25519 keys because they are considered to be more secure than others.
-- **`-f`**: This is used to specify the **file name** for storing the SSH keys. We use it to set a custom file name and path to avoid overwriting existing keys (Barrett, Silverman, & Byrnes, 2005). Here we stored it in our `.ssh` path as `do-key`
-- **`-C`**: Allows you to embed a comment in the public key file. (Barrett, Silverman, & Byrnes, 2005)
+- `ssh-keygen`: This is used to generate SSH key pairs.
+-  `-t`: option specifies the type of key to generate, such as RSA or ed25519 (Barrett, Silverman, & Byrnes, 2005). We use the ed25519 keys because they are considered to be more secure than others.
+- `-f`: This is used to specify the **file name** for storing the SSH keys. We use it to set a custom file name and path to avoid overwriting existing keys (Barrett, Silverman, & Byrnes, 2005). Here we stored it in our `.ssh` path as `do-key`
+- `-C`: Allows you to embed a comment in the public key file. (Barrett, Silverman, & Byrnes, 2005)
 
 #### Step 3: Verify
 
-1. After creating the SSH Key, you will should have **Two** keys the **`do-key`** and a **`do-key.pub`**. The **`do-key`** will be your private key, the public key which will be copied to your server is the      **`do-key.pub`**. 
-2. **`do-key`** should be saved to your local machine
-3. **`do-key.pub`** will be uploaded to **DigitalOcean** 
+1. After creating the SSH Key, you will should have **Two** keys the **`do-key`** and a **`do-key.pub`**. The `do-key` will be your private key, the public key which will be copied to your server is the      `do-key.pub`. 
+2. `do-key` should be saved to your local machine
+3. `do-key.pub` will be uploaded to **DigitalOcean** 
 
 ## Downloading Arch Linux
 
@@ -94,15 +94,34 @@ Now we are going to create a droplet on DigitalOcean, with the Arch Linux image 
 
 
 ## Adding SSH Keys to DigitalOcean
+Steps to add SSH Keys to DigitalOcean to provide a more efficient and secure way of accessing our Droplet that we will create later. 
 
+1. On the side navigation bar **Click** on the settings tab
+![](Assets/Screenshot%202024-09-26%20175403.png)
+2. **Click** on the security tab
+3. **Click** on the Add SSH Key button ![](Assets/Screenshot%202024-09-26%20175608.png)
+4. Next we are going to open up Windows PowerShell to get our **public key**
+ - For Windows users, in PowerShell use the following command
+		 ``Get-Content C:\Users\your-user-name\.ssh\do-key.pub | Set-Clipboard``
+-  For MacOS users, in the Terminal use the following command
+		 `pbcopy < ~/.ssh/do-key.pub`
+-  For Linux users, in the Terminal use the following command
+		 ``wl-copy < ~/.ssh/do-key.pub`` 
+
+5. **Paste** the contents of your public key into the "SSH Key content" box
+6. **Type** Key Name in our case we will be using `fkey` it can be anything, it is just to differentiate multiple keys
+7. Once completed, this key will automatically be copied to the droplet that we are going to create
 ## Creating a Droplet Running Arch Linux
 
-You are now going to create a droplet after uploading the image. We are going to use SSH as the authentication method. 
+You are now going to create a droplet after uploading the image.
 
 > [!Note]
 > Confirm you have uploaded the Arch Linux Image before moving to the next step.
 
-1. 
+1. Click **Create** and select **Droplets** from the Dropdown Menu ![](Screenshot%202024-09-26%20184042.png)
+2. Click **San Francisco** as your Region, and Select **Datacenter 3 SFO3** for the Datacenter option ![](Assets/Screenshot%202024-09-26%20184307%201.png)
+3. Click **Custom Images** and select the **Arch Linux** image we added previously ![](Screenshot%202024-09-26%20184737.png)
+4. 
 
 ## References
 
@@ -117,11 +136,3 @@ DigitalOcean. (n.d.). _How to choose a data center location for your business_. 
 > [!TIP]
 > Optional information to help a user be more successful.
 
-> [!IMPORTANT]
-> Essential information required for user success.
-
-> [!CAUTION]
-> Negative potential consequences of an action.
-
-> [!WARNING]
-> Dangerous certain consequences of an action.
