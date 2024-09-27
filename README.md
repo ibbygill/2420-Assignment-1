@@ -78,12 +78,20 @@ Visit [Arch Linux Image](https://gitlab.archlinux.org/archlinux/arch-boxes/-/pac
 
 
 ## Uploading Arch Linux Image to DigitalOcean
+Now we are going to create a droplet on DigitalOcean, with the Arch Linux image we downloaded, with this droplet
 
-
+1. **Click** on the Create button at the top of your screen.  ![[Pasted image 20240926165211.png]]
+2. You will see a **Droplets** button, click on that.![[Pasted image 20240926165344.png]]
+3. **Select** *San Francisco* as your region.
+4. Scroll down to Choose an image section, **Click** on Custom images ![[Pasted image 20240926165633.png]]
+5. **Click** on Upload Image button which will be located in your downloads folder. ![[Pasted image 20240926170822.png]]
+6. Here you will select the **Distribution** Arch Linux ![[Pasted image 20240926171027.png]]
+7. You will choose **San Francisco** datacenter region and **select** option 3
 ## References
 
 Barrett, D. J., Silverman, R. E., & Byrnes, R. G. (2005). _SSH, The Secure Shell: The Definitive Guide_ (2nd ed.). O'Reilly Media.
 Arch Linux Wiki. (n.d.). _Arch Linux_. https://wiki.archlinux.org/title/Arch_Linux
+DigitalOcean. (n.d.). _How to choose a data center location for your business_. DigitalOcean. https://docs.digitalocean.com/products/networking/regions/
 
 
 > [!NOTE]
@@ -100,5 +108,3 @@ Arch Linux Wiki. (n.d.). _Arch Linux_. https://wiki.archlinux.org/title/Arch_Lin
 
 > [!WARNING]
 > Dangerous certain consequences of an action.
-
-
