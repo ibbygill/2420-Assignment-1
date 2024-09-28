@@ -1,7 +1,7 @@
 # 2420-Assignment-1
 #### Quick Tutorial of Creating a Remote Server using DigitalOcean
 
-Welcome to this full tutorial on setting up a remote Arch Linux server using [DigitalOcean](https://www.digitalocean.com/). This guide will walk you through generating SSH Keys, adding a custom Arch Linux image, and creating a DigitalOcean Droplet running Arch Linux. By the end you'll be able to have a functional running server, and understand concepts that make it secure and efficient.
+Welcome to this full tutorial on setting up a remote Arch Linux server using [DigitalOcean](https://www.digitalocean.com/). This guide will walk you through generating SSH Keys, adding a custom Arch Linux image, and creating a DigitalOcean Droplet running Arch Linux. By the end you'll be able to have a functional running server, and understand concepts that make it secure and efficient. Also includes installing DOCTL and installing a droplet only using the command line, **BEWARE** *its hard*
 
 ____________________________
 
@@ -188,12 +188,12 @@ Congratulations! You have successfully completed the install using the Arch Linu
 
 To start this tutorial lets, install doctl using `winget`, winget is a command that is apart of Windows Package Manager. With this you can install packages straight from the command line. 
 
-1. Install doctl using the following command `winget install DigitalOcean.Doctl` ![](Screenshot%202024-09-27%20221053.png)
+1. Install doctl using the following command `winget install DigitalOcean.Doctl` ![](Assets/Screenshot%202024-09-27%20221053.png)
 3. Next we will need to generate a DigitalOcean API Key.
 4. On the main dashboard of DigitalOcean navigate to the left bar, click **API**
-5. Click **Generate New Token** button to create an API token![](Screenshot%202024-09-27%20215505.png)
+5. Click **Generate New Token** button to create an API token![](Assets/Screenshot%202024-09-27%20215505.png)
 6. In the next screen, type a **Token Name**
-7. Move down to **Quick Bulk Scope Select** and select **Creates, Updates, Reads, and Deletes** ![](Screenshot%202024-09-27%20215921.png)
+7. Move down to **Quick Bulk Scope Select** and select **Creates, Updates, Reads, and Deletes** ![](Assets/Screenshot%202024-09-27%20215921.png)
 8. Then click **Generate Token** at the bottom in green
 9. Save the **Token** somewhere save on your local machine 
 
@@ -201,13 +201,17 @@ To start this tutorial lets, install doctl using `winget`, winget is a command t
 > Confirm you have saved the **Token** as you will not be able to view it again after leaving this page
 
 8. Next we want to follow the steps in [Creating a Droplet Running Arch Linux](#creating-a-droplet-running-arch-linux) guide above and get to the step below
-9. Next to the button Create Droplet click **Create Via Command Line** ![](Screenshot%202024-09-27%20214519.png)
+9. Next to the button Create Droplet click **Create Via Command Line** ![](Assets/Screenshot%202024-09-27%20214519.png)
 10. Where it says select a library click **doctl** because we will be using this to create our droplet this time around.
-11. You should be prompted with information such as the image id, size, region, etc. ![](Screenshot%202024-09-27%20214835.png)
-12. **Copy** it 
-
-
-
+11. You should be prompted with information such as the image id, size, region, etc. ![](Assets/Screenshot%202024-09-27%20214835.png)
+12. **Copy** it and save it, we will need it soon
+13. Next we will run the doctl authentication command, run `doctl auth init` in the command line
+14. Here enter the **API TOKEN** that you have saved![](Assets/Screenshot%202024-09-27%20222418.png)
+15. Now type in `doctl compute ssh-key list` ![](Assets/Screenshot%202024-09-27%20222719.png)
+16. Copy the **FingerPrint** for the correct SSH Key, in this case fkey
+17. Next we will start the server using doctl take the command from step 11  and at the end add `--ssh-keys e9:dd:f9:69:d1:b7:f5:ac:9d:c9:e7:1f:fb:4c:02:55 fkey-test` which selects the correct FingerPrint and give it a name, here I gave it fkey-test ![](Assets/Screenshot%202024-09-27%20213215.png)
+18. You can run `doctl compute droplet list` in the command line, to show the list of your created droplets ![](Assets/Screenshot%202024-09-27%20223509.png)
+19. Congratulations, you have now created a droplet using the doctl command line
 
 
 ## References
@@ -216,8 +220,9 @@ Barrett, D. J., Silverman, R. E., & Byrnes, R. G. (2005). _SSH, The Secure Shell
 Arch Linux Wiki. (n.d.). _Arch Linux_. https://wiki.archlinux.org/title/Arch_Linux
 DigitalOcean. (n.d.). _How to choose a data center location for your business_. DigitalOcean. https://docs.digitalocean.com/products/networking/regions/
 Cloud-init Documentation. (n.d.). _User Data and Cloud-init_ https://cloudinit.readthedocs.io/en/latest/topics/format.html
-Neovim Documentation. (n.d.). _Introduction to Neovim_. Retrieved from https://neovim.io/
+Neovim Documentation. (n.d.). _Introduction to Neovim_. https://neovim.io/
 Nemeth, E., Snyder, G., & Hein, T. R. (2017). _UNIX and Linux System Administration Handbook_ (5th ed.). Pearson Education.
+Microsoft. (n.d.). _Windows Package Manager (winget)_. [https://docs.microsoft.com/en-us/windows/package-manager/](https://docs.microsoft.com/en-us/windows/package-manager/)
 
 
 > [!NOTE]
