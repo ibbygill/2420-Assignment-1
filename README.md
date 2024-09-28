@@ -186,7 +186,7 @@ Congratulations! You have successfully completed the install using the Arch Linu
 > -------------------------------------------------------
 > Here we are going to use doctl a `command-line tool` to create the a Arch Linux droplet
 
-To start this tutorial lets, install doctl using `winget`, winget is a command that is apart of Windows Package Manager. With this you can install packages straight from the command line. 
+To start this tutorial lets, install doctl using `winget`, winget is a command that is apart of Windows Package Manager. With this you can install packages straight from the command line (Microsoft, n.d.). 
 
 1. Install doctl using the following command `winget install DigitalOcean.Doctl` ![](Assets/Screenshot%202024-09-27%20221053.png)
 3. Next we will need to generate a DigitalOcean API Key.
