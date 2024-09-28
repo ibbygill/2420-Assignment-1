@@ -224,10 +224,3 @@ Neovim Documentation. (n.d.). _Introduction to Neovim_. https://neovim.io/
 Nemeth, E., Snyder, G., & Hein, T. R. (2017). _UNIX and Linux System Administration Handbook_ (5th ed.). Pearson Education.
 Microsoft. (n.d.). _Windows Package Manager (winget)_. [https://docs.microsoft.com/en-us/windows/package-manager/](https://docs.microsoft.com/en-us/windows/package-manager/)
 
-
-> [!NOTE]
-> Information the user should notice even if skimming.
-
-> [!TIP]
-> Optional information to help a user be more successful.
-
