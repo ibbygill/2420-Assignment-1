@@ -14,7 +14,8 @@ ____________________________
 5. [Uploading Arch Linux Image to DigitalOcean](#uploading-arch-linux-image-to-digitalocean)
 6. [Adding SSH Keys to DigitalOcean](#adding-ssh-keys-to-digitalocean)
 7. [Creating a Droplet Running Arch Linux](#creating-a-droplet-running-arch-linux)
-8. [References](#references)
+8. [Creating a Droplet Running Arch Linux Using DOCTL](#creating-a-droplet-running-arch-linux-using-doctl)
+9. [References](#references)
 
 
 _____________
@@ -31,7 +32,7 @@ Secure Shell (SSH) is used to set up a secure connection between a device and se
 
 - ##### **Security**
 	- SSH incorporates a process of encryption and authentication together. This process is called ***Cryptography***
-	- SSH keys function through a cryptographic protocols where the private key never leaves the user's machine.
+	- SSH keys function through a cryptographic protocols where the private key never leaves the user's machine (Barrett, Silverman, & Byrnes, 2005).
 	- SSH keys are effectively unguessable, unlike passwords which are vulnerable to guessing and brute force attacks (Barrett, Silverman, & Byrnes, 2005).
 
 
@@ -56,7 +57,7 @@ The next steps will showcase how to generate a new SSH key pair on your local ma
 ssh-keygen -t ed25519 -f ~/.ssh/do-key -C "your_email@example.com"
 ```
 
-##### Explaining Commands - 
+##### Explaining Commands 
 
 - `ssh-keygen`: This is used to generate SSH key pairs.
 -  `-t`: option specifies the type of key to generate, such as RSA or ed25519 (Barrett, Silverman, & Byrnes, 2005). We use the ed25519 keys because they are considered to be more secure than others.
@@ -177,6 +178,37 @@ Explaining Commands -
 19. Type `fd --version` and `nvim --version` you should see the following
     ![](Assets/Screenshot%202024-09-27%20154239%201.png)
 Congratulations! You have successfully completed the install using the Arch Linux Image.
+
+## Creating a Droplet Running Arch Linux Using DOCTL
+
+> [!NOTE]
+> ##### Complete SSH Keys creation and Arch Linux Image download before beginning this step
+> -------------------------------------------------------
+> Here we are going to use doctl a `command-line tool` to create the a Arch Linux droplet
+
+To start this tutorial lets, install doctl using `winget`, winget is a command that is apart of Windows Package Manager. With this you can install packages straight from the command line. 
+
+1. Install doctl using the following command `winget install DigitalOcean.Doctl` ![](Screenshot%202024-09-27%20221053.png)
+3. Next we will need to generate a DigitalOcean API Key.
+4. On the main dashboard of DigitalOcean navigate to the left bar, click **API**
+5. Click **Generate New Token** button to create an API token![](Screenshot%202024-09-27%20215505.png)
+6. In the next screen, type a **Token Name**
+7. Move down to **Quick Bulk Scope Select** and select **Creates, Updates, Reads, and Deletes** ![](Screenshot%202024-09-27%20215921.png)
+8. Then click **Generate Token** at the bottom in green
+9. Save the **Token** somewhere save on your local machine 
+
+> [!Caution]
+> Confirm you have saved the **Token** as you will not be able to view it again after leaving this page
+
+8. Next we want to follow the steps in [Creating a Droplet Running Arch Linux](#creating-a-droplet-running-arch-linux) guide above and get to the step below
+9. Next to the button Create Droplet click **Create Via Command Line** ![](Screenshot%202024-09-27%20214519.png)
+10. Where it says select a library click **doctl** because we will be using this to create our droplet this time around.
+11. You should be prompted with information such as the image id, size, region, etc. ![](Screenshot%202024-09-27%20214835.png)
+12. **Copy** it 
+
+
+
+
 
 ## References
 
