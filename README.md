@@ -14,8 +14,7 @@ ____________________________
 5. [Uploading Arch Linux Image to DigitalOcean](#uploading-arch-linux-image-to-digitalocean)
 6. [Adding SSH Keys to DigitalOcean](#adding-ssh-keys-to-digitalocean)
 7. [Creating a Droplet Running Arch Linux](#creating-a-droplet-running-arch-linux)
-8. [Connecting to Your Droplet](#connecting-to-your-droplet)
-9. [References](#references)
+8. [References](#references)
 
 
 _____________
